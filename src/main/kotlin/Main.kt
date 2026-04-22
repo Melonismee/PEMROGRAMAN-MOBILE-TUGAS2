@@ -2,7 +2,6 @@ import java.util.*
 
 data class Mahasiswa(var nim: Int, var nama: String)
 
-// Class dengan custom getter & setter
 class UserInput {
     var nama: String = ""
         get() = field.uppercase()
@@ -16,10 +15,10 @@ class DataHandle {
     private val scanner = Scanner(System.`in`)
 
     fun tambahData() {
-        print("Masukkan NIM: ")
+        print("NIM: ")
         val nim = inputInt()
 
-        print("Masukkan Nama: ")
+        print("Nama: ")
         val inputNama: String? = scanner.nextLine()
 
         val user = UserInput()
@@ -46,7 +45,7 @@ class DataHandle {
         val index = inputInt()
 
         if (index in list.indices) {
-            print("Nama baru: ")
+            print("Update nama: ")
             val namaBaru: String? = scanner.nextLine()
 
             val user = UserInput()
